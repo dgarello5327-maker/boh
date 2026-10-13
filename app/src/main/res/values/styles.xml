@@ -1,0 +1,3 @@
+<resources><style name="Theme.NeonWave" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+<item name="colorPrimary">#B45CFF</item><item name="colorPrimaryVariant">#7A2BCE</item><item name="colorSecondary">#E35DFF</item><item name="android:statusBarColor">#090711</item><item name="android:navigationBarColor">#090711</item><item name="android:windowLightStatusBar">false</item><item name="android:fontFamily">sans</item>
+</style></resources>
