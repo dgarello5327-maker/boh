@@ -1,29 +1,56 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#090711" android:fillViewport="true">
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
-<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NEONWAVE" android:textColor="#D9A0FF" android:textStyle="bold" android:textSize="13sp" android:letterSpacing="0.22"/>
-<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="La tua musica.&#10;La tua energia." android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="32sp" android:layout_marginTop="8dp"/>
-<TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pronto ad ascoltare" android:textColor="#B8AEC7" android:textSize="14sp" android:layout_marginTop="8dp" android:layout_marginBottom="18dp"/>
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
-<EditText android:id="@+id/search" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:hint="Cerca brani o artisti" android:singleLine="true" android:paddingHorizontal="14dp" android:textColor="#FFFFFF" android:textColorHint="#9B90AB" android:background="@drawable/bg_panel" android:inputType="text"/>
-<Button android:id="@+id/searchButton" android:layout_width="wrap_content" android:layout_height="52dp" android:text="CERCA" android:textColor="#FFFFFF" android:background="@drawable/bg_button" android:layout_marginStart="8dp"/>
-</LinearLayout>
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
-<Button android:id="@+id/localButton" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="FILE LOCALI" android:textColor="#FFFFFF" android:background="@drawable/bg_button"/>
-<Button android:id="@+id/favoritesButton" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="PREFERITI" android:textColor="#FFFFFF" android:background="@drawable/bg_button" android:layout_marginStart="8dp"/>
-</LinearLayout>
-<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="IN RIPRODUZIONE" android:textColor="#BFA0DE" android:textStyle="bold" android:textSize="12sp" android:letterSpacing="0.15" android:layout_marginTop="24dp"/>
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp" android:background="@drawable/bg_panel" android:layout_marginTop="10dp">
-<TextView android:id="@+id/trackTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Scegli un brano" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="20sp"/>
-<TextView android:id="@+id/trackArtist" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="NeonWave Music" android:textColor="#B8AEC7" android:textSize="14sp" android:layout_marginTop="4dp"/>
-<SeekBar android:id="@+id/progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:progressTint="#C46BFF" android:thumbTint="#E3B2FF" android:layout_marginTop="12dp"/>
-<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center" android:layout_marginTop="4dp">
-<Button android:id="@+id/previousButton" android:layout_width="wrap_content" android:layout_height="52dp" android:text="|◀" android:textColor="#FFFFFF" android:background="@drawable/bg_button"/>
-<Button android:id="@+id/playButton" android:layout_width="0dp" android:layout_height="54dp" android:layout_weight="1" android:text="▶ RIPRODUCI" android:textColor="#FFFFFF" android:background="@drawable/bg_button" android:layout_marginHorizontal="8dp"/>
-<Button android:id="@+id/nextButton" android:layout_width="wrap_content" android:layout_height="52dp" android:text="▶|" android:textColor="#FFFFFF" android:background="@drawable/bg_button"/>
-</LinearLayout>
-<Button android:id="@+id/favoriteCurrent" android:layout_width="match_parent" android:layout_height="48dp" android:text="♡ AGGIUNGI AI PREFERITI" android:textColor="#E5C6FF" android:background="@drawable/bg_button" android:layout_marginTop="8dp"/>
-</LinearLayout>
-<TextView android:id="@+id/listHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SCOPRI MUSICA GRATUITA" android:textColor="#BFA0DE" android:textStyle="bold" android:textSize="12sp" android:letterSpacing="0.15" android:layout_marginTop="24dp"/>
-<TextView android:id="@+id/resultsHint" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cerca registrazioni gratuite su Internet Archive." android:textColor="#A79BB8" android:textSize="13sp" android:layout_marginTop="6dp" android:layout_marginBottom="8dp"/>
-<LinearLayout android:id="@+id/results" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginBottom="24dp"/>
-</LinearLayout></ScrollView>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#09090D" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="20dp" android:paddingEnd="20dp" android:paddingTop="18dp" android:paddingBottom="28dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NEONWAVE" android:textColor="#C6A5FF" android:textStyle="bold" android:textSize="12sp" android:letterSpacing="0.24"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ascolta qualcosa di bello." android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="26sp" android:layout_marginTop="5dp"/>
+            </LinearLayout>
+            <TextView android:layout_width="44dp" android:layout_height="44dp" android:gravity="center" android:text="♫" android:textSize="24sp" android:textColor="#FFFFFF" android:background="@drawable/bg_button"/>
+        </LinearLayout>
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="La tua musica, senza interruzioni." android:textColor="#AAA6B5" android:textSize="13sp" android:layout_marginTop="7dp" android:layout_marginBottom="18dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_panel" android:paddingHorizontal="12dp">
+            <TextView android:layout_width="28dp" android:layout_height="wrap_content" android:text="⌕" android:textColor="#D3B6FF" android:textSize="26sp" android:gravity="center"/>
+            <EditText android:id="@+id/search" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:hint="Brani, artisti, album…" android:singleLine="true" android:paddingStart="8dp" android:paddingEnd="4dp" android:textColor="#FFFFFF" android:textColorHint="#898493" android:background="@android:color/transparent" android:inputType="text"/>
+            <Button android:id="@+id/searchButton" android:layout_width="wrap_content" android:layout_height="42dp" android:text="Cerca" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@drawable/bg_button"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SCELTO PER TE" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="25dp" android:layout_marginBottom="12dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:padding="16dp" android:background="@drawable/bg_hero">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LA TUA PROSSIMA SCOPERTA" android:textColor="#E9D9FF" android:textStyle="bold" android:textSize="10sp" android:letterSpacing="0.1"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Nuovi suoni.&#10;Nuove emozioni." android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="23sp" android:layout_marginTop="8dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Esplora registrazioni gratuite" android:textColor="#E1D5F2" android:textSize="12sp" android:layout_marginTop="6dp"/>
+                <Button android:id="@+id/discoverButton" android:layout_width="wrap_content" android:layout_height="44dp" android:text="Scopri musica" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@drawable/bg_button" android:layout_marginTop="12dp"/>
+            </LinearLayout>
+            <TextView android:layout_width="82dp" android:layout_height="108dp" android:gravity="center" android:text="♫" android:textSize="58sp" android:textColor="#F1DDFF" android:background="@drawable/bg_art"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="LA TUA LIBRERIA" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="26dp" android:layout_marginBottom="12dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/localButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:text="♫  File locali" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@drawable/bg_panel"/>
+            <Button android:id="@+id/favoritesButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:text="♡  Preferiti" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@drawable/bg_panel" android:layout_marginStart="9dp"/>
+        </LinearLayout>
+        <TextView android:id="@+id/listHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="MUSICA DA SCOPRIRE" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="18sp" android:layout_marginTop="26dp"/>
+        <TextView android:id="@+id/resultsHint" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cerca tra registrazioni gratuite disponibili online." android:textColor="#AAA6B5" android:textSize="13sp" android:layout_marginTop="5dp" android:layout_marginBottom="12dp"/>
+        <LinearLayout android:id="@+id/results" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="15dp" android:background="@drawable/bg_player" android:layout_marginTop="22dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="IN RIPRODUZIONE" android:textColor="#D7B8FF" android:textStyle="bold" android:textSize="10sp" android:letterSpacing="0.15"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView android:layout_width="52dp" android:layout_height="52dp" android:gravity="center" android:text="♫" android:textSize="28sp" android:textColor="#FFFFFF" android:background="@drawable/bg_art"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="12dp">
+                    <TextView android:id="@+id/trackTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Scegli un brano" android:textColor="#FFFFFF" android:textStyle="bold" android:textSize="15sp" android:maxLines="1"/>
+                    <TextView android:id="@+id/trackArtist" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="NeonWave Music" android:textColor="#B6B0C2" android:textSize="12sp" android:layout_marginTop="3dp" android:maxLines="1"/>
+                </LinearLayout>
+                <Button android:id="@+id/favoriteCurrent" android:layout_width="48dp" android:layout_height="48dp" android:text="♡" android:textSize="20sp" android:textColor="#E6CFFF" android:background="@android:color/transparent"/>
+                <Button android:id="@+id/playButton" android:layout_width="54dp" android:layout_height="50dp" android:text="▶" android:textSize="18sp" android:textColor="#FFFFFF" android:background="@drawable/bg_button"/>
+            </LinearLayout>
+            <SeekBar android:id="@+id/progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:progressTint="#C6A5FF" android:thumbTint="#FFFFFF" android:layout_marginTop="6dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center">
+                <Button android:id="@+id/previousButton" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="|◀  Precedente" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@android:color/transparent"/>
+                <Button android:id="@+id/nextButton" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="Successivo  ▶|" android:textAllCaps="false" android:textColor="#FFFFFF" android:background="@android:color/transparent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
