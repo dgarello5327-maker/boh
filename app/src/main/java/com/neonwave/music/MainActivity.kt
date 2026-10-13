@@ -99,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         }, ContextCompat.getMainExecutor(this))
 
         findViewById<Button>(R.id.searchButton).setOnClickListener { searchArchive(search.text.toString().trim()) }
+        findViewById<Button>(R.id.discoverButton).setOnClickListener { search.setText("music"); searchArchive("music") }
         findViewById<Button>(R.id.localButton).setOnClickListener { pickAudio.launch(arrayOf("audio/*")) }
         findViewById<Button>(R.id.favoritesButton).setOnClickListener {
             heading.text = "I TUOI PREFERITI"
@@ -137,7 +138,7 @@ class MainActivity : AppCompatActivity() {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        searchArchive("jazz")
+        searchArchive("music")
     }
 
     private fun searchArchive(query: String) {
@@ -147,7 +148,7 @@ class MainActivity : AppCompatActivity() {
             val found = withContext(Dispatchers.IO) {
                 runCatching {
                     val q = URLEncoder.encode("($query) AND mediatype:audio", "UTF-8")
-                    val url = URL("https://archive.org/advancedsearch.php?q=" + q + "&fl[]=identifier,title,creator&rows=25&page=1&output=json")
+                    val url = URL("https://archive.org/advancedsearch.php?q=" + q + "&fl[]=identifier,title,creator&rows=50&page=1&output=json")
                     val connection = (url.openConnection() as HttpURLConnection).apply {
                         connectTimeout = 12000
                         readTimeout = 15000
